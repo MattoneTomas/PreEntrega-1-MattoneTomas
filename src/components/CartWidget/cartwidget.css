@@ -1,22 +1,24 @@
 .cart-widget {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .cart-icon {
-    font-size: 1.5rem;
-    color: white;
-  }
-  
-  .cart-count {
-    background-color: red;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 0.2rem 0.5rem;
-    position: absolute;
-    top: -5px;
-    right: -10px;
-  }
+  display: flex;
+  align-items: center;
+  margin-left: auto; 
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  white-space: nowrap; 
+}

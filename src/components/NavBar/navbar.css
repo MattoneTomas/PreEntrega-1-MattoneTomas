@@ -1,13 +1,17 @@
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-link {
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #ff5733 !important;
-  }
+.navbar-nav {
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 100px; 
+}
+
+.nav-link {
+  text-transform: uppercase;
+  transition: color 0.3s;
+  color: white; 
+}
+
+.nav-link:hover {
+  color: #ff5733 !important; 
+}
