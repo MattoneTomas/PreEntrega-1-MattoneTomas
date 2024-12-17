@@ -16,7 +16,7 @@ function ItemDetailContainer() {
       category: "zapatillas",
       name: "Zapatillas Nike Air Max",
       description: "Comodidad y estilo con la última tecnología Air Max.",
-      price: "$150",
+      price: "$175000",
       image: airMaxImage,
     },
     {
@@ -24,7 +24,7 @@ function ItemDetailContainer() {
       category: "camisetas",
       name: "Camiseta Nike Pro",
       description: "Ligera y transpirable, perfecta para entrenamientos intensos.",
-      price: "$35",
+      price: "$70000",
       image: nikeProImage,
     },
     {
@@ -32,7 +32,7 @@ function ItemDetailContainer() {
       category: "shorts",
       name: "Shorts Nike Dri-FIT",
       description: "Mantente fresco con este short de alto rendimiento.",
-      price: "$45",
+      price: "$50000",
       image: drifitshorts,
     },
   ];
