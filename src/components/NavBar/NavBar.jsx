@@ -28,7 +28,7 @@ const NavBar = () => {
                         {categories.map((category, index) => (
                             <li key={index} className="nav-item">
                                 <Link
-                                    to={`/${category.toLowerCase()}`}
+                                    to={`/category/${category.toLowerCase()}`}
                                     className="nav-link"
                                 >
                                     {category}

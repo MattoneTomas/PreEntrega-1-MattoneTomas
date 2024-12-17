@@ -18,12 +18,12 @@ function App() {
                     <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a Nike! Explora nuestros productos." />} />
 
                     {/* Rutas específicas por categoría */}
-                    <Route path="/camisetas" element={<ItemListContainer category="camisetas" />} />
-                    <Route path="/shorts" element={<ItemListContainer category="shorts" />} />
-                    <Route path="/zapatillas" element={<ItemListContainer category="zapatillas" />} />
+                    <Route path="/category/camisetas" element={<ItemListContainer category="camisetas" />} />
+                    <Route path="category/shorts" element={<ItemListContainer category="shorts" />} />
+                    <Route path="category/zapatillas" element={<ItemListContainer category="zapatillas" />} />
 
                     {/* Ruta para el detalle del producto */}
-                    <Route path="/detalle/:id/:category" element={<ItemDetailContainer />} />
+                    <Route path="/item/:id" element={<ItemDetailContainer/>} />
                 </Routes>
             </div>
         </Router>

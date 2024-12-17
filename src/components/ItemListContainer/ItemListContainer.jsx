@@ -12,21 +12,21 @@ const ItemListContainer = ({ greeting, category }) => {
     {
       id: "1",
       name: "Zapatillas Nike Air Max",
-      price: "$150",
+      price: "$175000",
       image: airMaxImage,
       category: "zapatillas"
     },
     {
       id: "2",
       name: "Camiseta Nike Pro",
-      price: "$35",
+      price: "$70000",
       image: nikeProImage,
       category: "camisetas"
     },
     {
       id: "3",
       name: "Shorts Nike Dri-FIT",
-      price: "$45",
+      price: "$50000",
       image: drifitshorts,
       category: "shorts"
     },
@@ -36,6 +36,7 @@ const ItemListContainer = ({ greeting, category }) => {
   const products = category
     ? allProducts.filter(product => product.category === category)
     : allProducts;
+
 
   return (
     <div className="item-list-container">
@@ -47,7 +48,7 @@ const ItemListContainer = ({ greeting, category }) => {
             <h3>{product.name}</h3>
             <p>{product.price}</p>
             {/* Link a la página de detalles del producto */}
-            <Link to={`/detalle/${product.id}/${product.category}`} className="detail-link">
+            <Link to={`/item/${product.id}`} className="detail-link">
               Ver Detalles
             </Link>
           </div>

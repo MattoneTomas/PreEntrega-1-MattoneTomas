@@ -39,7 +39,7 @@ function ItemDetailContainer() {
 
   // Buscar el producto por ID y categoría
   const product = allProducts.find(
-    (prod) => prod.id === id && prod.category === category
+    (prod) => prod.id === id
   );
 
   // Mostrar un mensaje si el producto no existe
