@@ -9,6 +9,11 @@ h1 {
   color: #333; /* Mantener tono suave pero legible */
 }
 
+h2 {
+  text-align: center;
+  color: #333;
+}
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -121,3 +126,4 @@ h1 {
 .back-to-catalog:hover {
   background-color: #0056b3;
 }
+
