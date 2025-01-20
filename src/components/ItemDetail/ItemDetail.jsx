@@ -1,7 +1,19 @@
+import { CartContext } from "../CartContext/CartContext";
+import { useContext } from "react";
 import React from "react";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ product }) => {
+    const { addProduct } = useContex(CartContext) 
+
+    const AddProductInCart = (count) => {
+        const productCart = { ...product, quantity: count}
+
+        addProduct(productCart)
+    }
+
+
+
     return (
         <div className="product-card">
             <img

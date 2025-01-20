@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavBar } from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { CartProvider } from './components/CartContext/CartContext';
+import Cart from './components/Cart/Cart';
 
 function App() {
     const handleCategoryClick = (category) => {
@@ -12,6 +14,7 @@ function App() {
     return (
         <Router>
             <div>
+                <CartProvider>
                 <NavBar onCategoryClick={handleCategoryClick} />
                 <Routes>
                     {/* Ruta para el catálogo */}
@@ -21,10 +24,12 @@ function App() {
                     <Route path="/category/camisetas" element={<ItemListContainer category="camisetas" />} />
                     <Route path="category/shorts" element={<ItemListContainer category="shorts" />} />
                     <Route path="category/zapatillas" element={<ItemListContainer category="zapatillas" />} />
+                    <Route path="/cart" element={<Cart /> }/>
 
                     {/* Ruta para el detalle del producto */}
                     <Route path="/item/:id" element={<ItemDetailContainer/>} />
                 </Routes>
+                </CartProvider>
             </div>
         </Router>
     );

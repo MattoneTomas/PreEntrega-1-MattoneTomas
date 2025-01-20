@@ -1,14 +1,20 @@
+
+import { CartContext } from "../CartContext/CartContext";
+import { useContext } from "react";
 import "./CartWidget.css";
 import { FaShoppingCart } from "react-icons/fa"; // Librería para íconos
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  const cartCount = 5; // Número hardcodeado
+  const { totalQuantity } = useContext(CartContext)
+
+  let quantity = totalQuantity()
 
   return (
-    <div className="cart-widget">
+    <Link to="/cart" className="cart-widget">
       <FaShoppingCart className="cart-icon" />
-      <span className="cart-count">{cartCount}</span>
-    </div>
+      <span className="cart-count">{ quantity !== 0 && quantity  }</span>
+    </Link>
   );
 };
 
