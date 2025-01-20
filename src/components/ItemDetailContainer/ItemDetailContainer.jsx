@@ -2,12 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { allProducts } from "../../data/data.js";
 import ItemDetail from "./ItemDetail.jsx";
+import { Link } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
 
     // Buscar el producto por ID
-    const product = allProducts.find(prod => prod.id === id);
+    const product = allProducts.find(prod => prod.id === id.toString());
 
     return (
         <div className="item-detail-container">
