@@ -1,6 +1,6 @@
 import React from "react";
 import { allProducts } from "../../data/data.js";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "./ItemList.jsx";
 
 const ItemListContainer = ({ greeting, category }) => {
     // Filtrar productos por categoría si está definida
