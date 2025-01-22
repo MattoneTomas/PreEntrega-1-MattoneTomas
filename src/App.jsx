@@ -5,6 +5,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from './components/CartWidget/CartContext';
 import Cart from './components/CartWidget/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
     const handleCategoryClick = (category) => {
@@ -25,6 +26,7 @@ function App() {
                     <Route path="category/shorts" element={<ItemListContainer category="shorts" />} />
                     <Route path="category/zapatillas" element={<ItemListContainer category="zapatillas" />} />
                     <Route path="/cart" element={<Cart /> }/>
+                    <Route path="/checkout" element={<Checkout /> }/>
 
                     {/* Ruta para el detalle del producto */}
                     <Route path="/item/:id" element={<ItemDetailContainer/>} />
