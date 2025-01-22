@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { allProducts } from "../../data/data.js";
+import { doc, getDoc } from "firebase/firestore";
 import ItemDetail from "./ItemDetail.jsx";
 import { Link } from "react-router-dom";
+import db from "../../db/db.js";
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
+    const [product, setProduct] = useState(null);
 
-    // Buscar el producto por ID
-    const product = allProducts.find(prod => prod.id === id.toString());
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+                const docRef = doc(db, "products", id);
+                const dataDb = await getDoc(docRef);
+
+                if (dataDb.exists()) {
+                    const data = { id: dataDb.id, ...dataDb.data() };
+                    setProduct(data);
+                } else {
+                    console.log("Producto no encontrado");
+                }
+            } catch (error) {
+                console.error("Error al obtener el producto:", error);
+            }
+        };
+
+        getProduct();
+    }, [id]);
 
     return (
         <div className="item-detail-container">

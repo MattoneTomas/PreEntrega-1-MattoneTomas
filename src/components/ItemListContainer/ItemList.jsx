@@ -10,7 +10,7 @@ const ItemList = ({ products }) => {
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="product-image"
+                        className="product-imagen"
                     />
                     <h3 className="product-title">{product.name}</h3>
                     <p className="product-price">{product.price}</p>
